@@ -15,7 +15,7 @@ class Client(Base):
     default = Column(String)
     housing = Column(String)
     loan = Column(String)
-    target = Column(Boolean)
+    subscribed = Column(Boolean)
 
     def __repr__(self):
         return f'id={self.id}, age={self.age}"\

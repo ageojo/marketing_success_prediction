@@ -11,6 +11,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.schema import MetaData
 from sqlalchemy import Table
 
+from settings import db_uri
 
 def main(infile, db_uri):
     Base = declarative_base()
@@ -25,7 +26,7 @@ def main(infile, db_uri):
         default = Column(String)
         housing = Column(String)
         loan = Column(String)
-        target = Column(Boolean)
+        subscribed = Column(Boolean)
 
         def __repr__(self):
             return f'id={self.id}, age={self.age}"\
@@ -76,5 +77,5 @@ def main(infile, db_uri):
 
 if __name__ == "__main__":
     infile = "bank_client_data.csv"
-    db_uri = 'postgresql://ubuntu:metis@54.203.158.82:5432'
+    db_uri = db_uri
     sys.exit(main(infile, db_uri))

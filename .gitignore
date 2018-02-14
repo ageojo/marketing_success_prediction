@@ -5,6 +5,9 @@ notes/
 *.csv
 *.pkl
 
+secret_settings.py
+bank_marketing_UCI_ML_dataset.ipynb
+
 .idea/
 
 # ipython previous
